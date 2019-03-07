@@ -270,7 +270,7 @@ func (rwops *RWops) ReadBE64() uint64 {
 	return uint64(C.SDL_ReadBE64(rwops.cptr()))
 }
 
-// LoadFile_RW loads all the data from an SDL data stream.
+// LoadFileRW: LoadFile_RW loads all the data from an SDL data stream.
 // (https://wiki.libsdl.org/SDL_LoadFile_RW)
 func (src *RWops) LoadFileRW(freesrc bool) (data []byte, size int) {
 	var _size C.size_t
